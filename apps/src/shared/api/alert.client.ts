@@ -4,7 +4,7 @@ import Cookies from 'js-cookie'
 export async function fetchAlerts(): Promise<Notification[]> {
   try {
     const token = Cookies.get('auth-token')
-    const res = await fetch('https://api.antmen.site:9090/api/v1/common/alerts', {
+    const res = await fetch('http://localhost:9090/api/v1/common/alerts', {
       headers: {
         Authorization: token ?? '',
       },

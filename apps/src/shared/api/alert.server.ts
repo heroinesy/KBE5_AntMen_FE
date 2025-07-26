@@ -7,7 +7,7 @@ export async function fetchAlerts(): Promise<Notification[]> {
     const token = cookieStore.get('auth-token')?.value
     const decodedToken = token ? decodeURIComponent(token) : null;
 
-    const res = await fetch('https://api.antmen.site:9090/api/v1/common/alerts', {
+    const res = await fetch('http://localhost:9090/api/v1/common/alerts', {
       headers: {
         Authorization: decodedToken ?? '',
       },

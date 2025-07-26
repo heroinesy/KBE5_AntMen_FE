@@ -103,7 +103,7 @@ class BoardService {
       'Content-Type': 'application/json',
     };
 
-    const url = `https://api.antmen.site:9090/api/v1/board/${id}`;
+    const url = `http://localhost:9090/api/v1/board/${id}`;
     console.log('📤 게시글 상세 요청 (인증 없음):', {
       url,
       boardId: id,
@@ -168,7 +168,7 @@ class BoardService {
     if (authToken) {
       headers['Authorization'] = authToken;
     }
-    const url = `https://api.antmen.site:9090/api/v1/board/comment/${boardId}`;
+    const url = `http://localhost:9090/api/v1/board/comment/${boardId}`;
     const response = await fetch(url, {
       method: 'POST',
       headers,
@@ -189,7 +189,7 @@ class BoardService {
     if (authToken) {
       headers['Authorization'] = authToken;
     }
-    const url = `https://api.antmen.site:9090/api/v1/board/${boardId}/${commentId}`;
+    const url = `http://localhost:9090/api/v1/board/${boardId}/${commentId}`;
     const response = await fetch(url, {
       method: 'PUT',
       headers,
@@ -210,7 +210,7 @@ class BoardService {
     if (authToken) {
       headers['Authorization'] = authToken;
     }
-    const url = `https://api.antmen.site:9090/api/v1/board/${boardId}/${commentId}`;
+    const url = `http://localhost:9090/api/v1/board/${boardId}/${commentId}`;
     const response = await fetch(url, {
       method: 'DELETE',
       headers,
@@ -250,7 +250,7 @@ class BoardService {
 
     // 백엔드 boardType으로 변환
     const backendBoardType = this.getBoardTypeParam(boardType, userRole);
-    const url = `https://api.antmen.site:9090/api/v1/board/${backendBoardType}/list?${params.toString()}`;
+    const url = `http://localhost:9090/api/v1/board/${backendBoardType}/list?${params.toString()}`;
     console.log('📤 게시글 목록 요청:', { 
       frontendBoardType: boardType, 
       backendBoardType, 
@@ -333,7 +333,7 @@ class BoardService {
 
     console.log('📤 고객 게시글 요청:', { headers, requestData });
 
-    const response = await fetch('https://api.antmen.site:9090/api/v1/board/customer', {
+    const response = await fetch('http://localhost:9090/api/v1/board/customer', {
       method: 'POST',
       headers,
       body: JSON.stringify(requestData)
@@ -372,7 +372,7 @@ class BoardService {
 
     console.log('📤 매니저 게시글 요청:', { headers, requestData });
 
-    const response = await fetch('https://api.antmen.site:9090/api/v1/board/manager', {
+    const response = await fetch('http://localhost:9090/api/v1/board/manager', {
       method: 'POST',
       headers,
       body: JSON.stringify(requestData)
@@ -403,7 +403,7 @@ class BoardService {
       console.warn('⚠️ 쿠키에서 auth-token을 찾을 수 없습니다!');
     }
 
-    const url = `https://api.antmen.site:9090/api/v1/board/${boardId}`;
+    const url = `http://localhost:9090/api/v1/board/${boardId}`;
     console.log('📤 게시글 수정 요청:', { url, boardId, headers });
 
     try {
@@ -450,7 +450,7 @@ class BoardService {
       headers['Authorization'] = authToken;
     }
 
-    const url = `https://api.antmen.site:9090/api/v1/board/${boardId}`;
+    const url = `http://localhost:9090/api/v1/board/${boardId}`;
     console.log('📤 게시글 삭제 요청:', { url, boardId });
 
     try {
@@ -500,7 +500,7 @@ class BoardService {
       console.warn('⚠️ 쿠키에서 auth-token을 찾을 수 없습니다!');
     }
 
-    const url = `https://api.antmen.site:9090/api/v1/board/${boardId}/resolved`;
+    const url = `http://localhost:9090/api/v1/board/${boardId}/resolved`;
     console.log('📤 문의 완료 요청:', { url, boardId, headers });
 
     try {

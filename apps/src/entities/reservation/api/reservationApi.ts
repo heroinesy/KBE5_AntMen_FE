@@ -2,7 +2,7 @@ import { Reservation, ReservationHistory, ReservationStatus } from '../model/typ
 import { customFetch } from '@/shared/api/base';
 import { useAuthStore } from '@/shared/stores/authStore'
 
-const BASE_URL = 'https://api.antmen.site:9092/v1/manager/reservations';
+const BASE_URL = 'http://localhost:9092/v1/manager/reservations';
 
 class ApiError extends Error {
   constructor(
@@ -148,7 +148,7 @@ export const getRecommendDuration = async (
     }
 
     const data = await customFetch<number>(
-      `https://api.antmen.site:9091/recommend-duration?address_id=${addressId}`,
+      `http://localhost:9091/recommend-duration?address_id=${addressId}`,
       {
         headers,
         cache: 'no-store',

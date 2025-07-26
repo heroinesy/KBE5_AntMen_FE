@@ -6,7 +6,7 @@ export async function fetchUserDataApi(
 ): Promise<UserData | null> {
   try {
     return await customFetch<UserData>(
-      'https://api.antmen.site:9091/customers/confirm',
+      'http://localhost:9091/customers/confirm',
       {
         headers: {
           'Content-Type': 'application/json',

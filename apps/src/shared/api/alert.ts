@@ -1,6 +1,6 @@
 import { customFetch } from './base'
 
-const BASE_URL = 'https://api.antmen.site:9090/api/v1/common/alerts'
+const BASE_URL = 'http://localhost:9090/api/v1/common/alerts'
 
 export interface Alert {
   alertId: number

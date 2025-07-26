@@ -291,7 +291,7 @@ const ManagerSignUpPage = () => {
       }
 
       // API 호출
-      const response = await fetch('https://api.antmen.site:9092/v1/manager/signup', {
+      const response = await fetch('http://localhost:9092/v1/manager/signup', {
         method: 'POST',
         headers: {
           'Accept': 'application/json',

@@ -2,7 +2,7 @@ import { EventSourceMessage, fetchEventSource } from '@microsoft/fetch-event-sou
 import { Alert, AlertResponse } from '@/entities/alert/model/types';
 import { customFetch } from '@/shared/api/base';
 
-const ALERT_API_BASE = 'https://api.antmen.site:9090/api/v1/common/alerts';
+const ALERT_API_BASE = 'http://localhost:9090/api/v1/common/alerts';
 const MAX_RETRY_COUNT = 3;
 
 // auth-token 쿠키에서 토큰 추출

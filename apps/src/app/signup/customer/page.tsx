@@ -149,7 +149,7 @@ const CustomerSignUpPage = () => {
         formData.append('userProfile', basicData.profileImage)
       }
 
-      const response = await fetch('https://api.antmen.site:9091/customers/signup', {
+      const response = await fetch('http://localhost:9091/customers/signup', {
         method: 'POST',
         body: formData,
       })

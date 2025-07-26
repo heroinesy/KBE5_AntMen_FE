@@ -1,7 +1,7 @@
 import { CalculationHistoryItem } from '../model/types';
 
 export async function getCalculationHistory(token: string): Promise<CalculationHistoryItem[]> {
-  const response = await fetch('https://api.antmen.site:9092/api/v1/manager/calculation/history', {
+  const response = await fetch('http://localhost:9092/api/v1/manager/calculation/history', {
     method: 'GET',
     headers: {
       'Authorization': `${token}`,

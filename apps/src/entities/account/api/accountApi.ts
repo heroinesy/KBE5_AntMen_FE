@@ -6,8 +6,8 @@ import type {
   UserProfile 
 } from '../model/types';
 
-const MANAGER_BASE_URL = 'https://api.antmen.site:9092/v1/manager';
-const CUSTOMER_BASE_URL = 'https://api.antmen.site:9091/customers';
+const MANAGER_BASE_URL = 'http://localhost:9092/v1/manager';
+const CUSTOMER_BASE_URL = 'http://localhost:9091/customers';
 
 // 수요자 업데이트 요청 DTO
 interface CustomerUpdateRequest {

@@ -79,7 +79,7 @@ export default function ReservationDetailPage() {
       setError(null)
       try {
         const res = await customFetch<ReservationHistory>(
-          `https://api.antmen.site:9091/api/v1/customer/reservations/${reservationId}/history`
+          `http://localhost:9091/api/v1/customer/reservations/${reservationId}/history`
         )
         setReservation(res)
       } catch (error) {
