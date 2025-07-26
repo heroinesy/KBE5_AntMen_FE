@@ -2,8 +2,8 @@ import axios from 'axios';
 import { AdminLoginRequest, AdminLoginResponse, AdminChangePasswordRequest, Admin, BoardRequestDto, ReservationMatchingListDto, ManualMatchingRequest, ReservationMatchingResponse, ReservationCancelRequest, ReservationCancelResponse, ReservationAdminResponse } from './types';
 import { getCookie, ADMIN_TOKEN_COOKIE } from '../lib/cookie';
 
-const API_BASE_URL = 'https://api.antmen.site:9093/api/v1';
-const API_BASE_URL_9090 = 'https://api.antmen.site:9090/api/v1';
+const API_BASE_URL = 'http://localhost:9093/api/v1';
+const API_BASE_URL_9090 = 'http://localhost:9090/api/v1';
 // const API_BASE_URL = 'http://localhost:9093/api/v1';
 // const API_BASE_URL_9090 = 'http://localhost:9090/api/v1';
 

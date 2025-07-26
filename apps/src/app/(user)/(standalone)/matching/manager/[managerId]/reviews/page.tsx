@@ -3,7 +3,7 @@ import { type ReviewResponse } from '@/shared/api/review';
 
 // 서버에서만 호출되는 fetch 함수
 async function fetchUserReviews(userId: string): Promise<ReviewResponse[]> {
-  const res = await fetch(`https://api.antmen.site:9091/api/v1/common/reviews/users/${userId}`, { cache: 'no-store' });
+  const res = await fetch(`http://localhost:9091/api/v1/common/reviews/users/${userId}`, { cache: 'no-store' });
   if (!res.ok) return [];
   return res.json();
 }

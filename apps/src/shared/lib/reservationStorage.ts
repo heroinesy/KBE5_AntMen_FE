@@ -6,7 +6,7 @@ import { useAuthStore } from '@/shared/stores/authStore';
  * 현재는 백엔드 미구현으로 주석처리됨
  */
 // class ReservationSyncAPI {
-//   private static baseURL = 'https://api.antmen.site:9091';
+//   private static baseURL = 'http://localhost:9091';
 
 //   /**
 //    * 서버에 임시 예약 정보 저장

@@ -3,7 +3,7 @@ import {
   MatchingRecommendationSettingsResponseDto 
 } from '../types/matchingRecommendation';
 
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'https://api.antmen.site:9093';
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:9093';
 
 // 현재 매칭 추천 기준 설정 조회
 export const getCurrentMatchingRecommendationSettings = async (): Promise<MatchingRecommendationSettingsResponseDto> => {

@@ -1,6 +1,6 @@
 import { customFetch } from './base'
 
-const REFUND_API_URL = 'https://api.antmen.site:9091/api/v1/customer/refunds'
+const REFUND_API_URL = 'http://localhost:9091/api/v1/customer/refunds'
 
 // 환불 요청 DTO
 export interface RefundRequestDto {

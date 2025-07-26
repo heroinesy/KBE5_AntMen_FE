@@ -32,7 +32,7 @@ export const fetchAddresses = async (): Promise<CustomerAddressResponse[]> => {
   // 클라이언트 환경에서만 쿠키를 읽음
   const token = getCookie('auth-token');
   const decodedToken = token ? decodeURIComponent(token) : null;
-  const res = await fetch('https://api.antmen.site:9091/customers/address', {
+  const res = await fetch('http://localhost:9091/customers/address', {
     method: 'GET',
     credentials: 'include',
     headers: decodedToken ? { Authorization: decodedToken } : {},
@@ -51,7 +51,7 @@ export const createAddress = async (
   // ✅ 디버깅: 전송 데이터 확인
   console.log('주소 등록 데이터 (위경도 포함):', data);
 
-  const res = await fetch('https://api.antmen.site:9091/customers/address', {
+  const res = await fetch('http://localhost:9091/customers/address', {
     method: 'POST',
     credentials: 'include',
     headers: decodedToken
@@ -65,7 +65,7 @@ export const createAddress = async (
 
 // 주소 수정
 export const updateAddress = (addressId: number, data: CustomerAddressRequest) => {
-  return customFetch<CustomerAddressResponse>(`https://api.antmen.site:9091/customers/address/${addressId}`, {
+  return customFetch<CustomerAddressResponse>(`http://localhost:9091/customers/address/${addressId}`, {
     method: 'PUT',
     body: JSON.stringify(data),
   });
@@ -73,6 +73,6 @@ export const updateAddress = (addressId: number, data: CustomerAddressRequest) =
 
 // 주소 삭제
 export const deleteAddress = (addressId: number) =>
-  customFetch<void>(`https://api.antmen.site:9091/customers/address/${addressId}/delete`, {
+  customFetch<void>(`http://localhost:9091/customers/address/${addressId}/delete`, {
     method: 'DELETE',
   }); 

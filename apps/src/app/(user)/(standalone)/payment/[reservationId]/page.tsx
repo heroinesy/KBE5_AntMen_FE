@@ -64,7 +64,7 @@ export default function PaymentPage({ params }: PaymentPageProps) {
         const token = Cookies.get('auth-token');
         if (!token) throw new Error('로그인이 필요합니다.');
         let cleanToken = token.replace(/^Bearer\s+/i, '').replace(/\s+/g, '');
-        const reservationResponse = await fetch(`https://api.antmen.site:9091/api/v1/customer/reservations/${params.reservationId}`, {
+        const reservationResponse = await fetch(`http://localhost:9091/api/v1/customer/reservations/${params.reservationId}`, {
           headers: { 'Authorization': `Bearer ${cleanToken}` }
         });
         if (!reservationResponse.ok) throw new Error('예약 정보를 불러오는데 실패했습니다.');

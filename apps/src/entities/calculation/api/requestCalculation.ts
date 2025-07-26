@@ -4,7 +4,7 @@ export async function requestCalculation(
   token: string, 
   params: CalculationRequestParams
 ): Promise<{ message: string }> {
-  const url = new URL('https://api.antmen.site:9092/api/v1/manager/calculation/request');
+  const url = new URL('http://localhost:9092/api/v1/manager/calculation/request');
   url.searchParams.append('startDate', params.startDate);
   url.searchParams.append('endDate', params.endDate);
 

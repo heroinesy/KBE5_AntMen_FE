@@ -8,7 +8,7 @@ interface CheckLoginIdResponse {
 export const checkLoginId = async (loginId: string): Promise<boolean> => {
   try {
     const response = await fetch(
-      `https://api.antmen.site:9090/api/v1/auth/check-id?loginId=${loginId}`,
+      `http://localhost:9090/api/v1/auth/check-id?loginId=${loginId}`,
       {
         headers: {
           'Content-Type': 'application/json',

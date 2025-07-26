@@ -1,6 +1,6 @@
 import { Payment, PaymentRequestDto } from '../model/types';
 
-const PAYMENT_API_URL = 'https://api.antmen.site:9091/api/v1/payments';
+const PAYMENT_API_URL = 'http://localhost:9091/api/v1/payments';
 
 export const requestPayment = async (paymentData: PaymentRequestDto, token: string): Promise<Payment> => {
   try {

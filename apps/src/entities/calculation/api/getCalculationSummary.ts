@@ -14,7 +14,7 @@ export async function getCalculationSummary(
   token: string, 
   params: CalculationSummaryParams
 ): Promise<CalculationSummaryResponse> {
-  const url = new URL('https://api.antmen.site:9092/api/v1/manager/calculation/my/summary');
+  const url = new URL('http://localhost:9092/api/v1/manager/calculation/my/summary');
   url.searchParams.append('startDate', params.startDate);
   url.searchParams.append('EndDate', params.EndDate);
 

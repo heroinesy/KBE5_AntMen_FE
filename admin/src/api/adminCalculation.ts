@@ -2,7 +2,7 @@ import axios from 'axios';
 import { AdminCalculationResponseDto, AdminCalculationDetailDto } from './types';
 import { getCookie, ADMIN_TOKEN_COOKIE } from '../lib/cookie';
 
-const API_BASE_URL = 'https://api.antmen.site:9093/api/v1';
+const API_BASE_URL = 'http://localhost:9093/api/v1';
 
 // 정산 API 인스턴스
 const calculationApi = axios.create({

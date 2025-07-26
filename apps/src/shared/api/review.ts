@@ -2,8 +2,8 @@ import { customFetch } from './base'
 
 export type ReviewAuthorType = 'CUSTOMER' | 'MANAGER'
 
-const MANAGER_BASE_URL = 'https://api.antmen.site:9092/v1/manager/reviews'
-const CUSTOMER_BASE_URL = 'https://api.antmen.site:9091/api/v1/customer/reviews'
+const MANAGER_BASE_URL = 'http://localhost:9092/v1/manager/reviews'
+const CUSTOMER_BASE_URL = 'http://localhost:9091/api/v1/customer/reviews'
 
 export interface ReviewRequest {
   reservationId: number
@@ -40,7 +40,7 @@ export interface ReviewSummary {
 
 // 매니저 리뷰 summary API 함수
 export async function getManagerReviewSummary(managerId: number | string): Promise<ReviewSummary> {
-  const res = await fetch(`https://api.antmen.site:9092/v1/manager/reviews/summary/${managerId}`)
+  const res = await fetch(`http://localhost:9092/v1/manager/reviews/summary/${managerId}`)
   if (!res.ok) {
     return { totalReviews: 0, avgRating: 0 }
   }
@@ -49,7 +49,7 @@ export async function getManagerReviewSummary(managerId: number | string): Promi
 
 // 수요자 리뷰 summary API 함수
 export async function getCustomerReviewSummary(customerId: number | string): Promise<ReviewSummary> {
-  const res = await fetch(`https://api.antmen.site:9091/api/v1/customer/reviews/summary/${customerId}`)
+  const res = await fetch(`http://localhost:9091/api/v1/customer/reviews/summary/${customerId}`)
   if (!res.ok) {
     return { totalReviews: 0, avgRating: 0 }
   }
